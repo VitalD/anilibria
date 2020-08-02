@@ -79,7 +79,7 @@ $(document).on("click", "[data-submit-register]", function(e) {
 			});
 		});
 	}else{
-		$.post("//"+document.domain+"/public/registration.php", { 'login': login, 'mail': mail, 'g-recaptcha-response': grecaptcha.getResponse(recaptcha1), 'recaptcha': 2 }, function(json){
+		$.post("//"+document.domain+"/public/registration.php", { 'login': login, 'mail': mail, 'passwd' : passwd, 'g-recaptcha-response': grecaptcha.getResponse(recaptcha1), 'recaptcha': 2 }, function(json){
 			console.log(json);
 			data = JSON.parse(json);
 			color = 'green';
